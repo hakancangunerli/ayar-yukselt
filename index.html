@@ -4,12 +4,21 @@
         <title>ayar yukseltme/indirme programi</title>
     </haed> 
 <body>
-Ayar yükseltme<BR>
-<html> eldeki altin milyemi: </html> <input type="text" id="e2"> <br> <br> 
-<html> istenilen altin milyemi </html><input type="text" id="e3"> <br>  <br> 
-<html> eldeki altinin agirligi </html><input type="text" id="e4">
 
-<button onclick="yukselt();" >hesapla</button>
+<center><p style="font-size:2cm"> Ayar Yükseltme Programı</p></center>
+
+<span style="font-size:1cm;">  ELDEKİ ALTIN AĞIRLIĞI (gram) </span>
+
+<input type="text" id="e4">
+<br><br>
+<span style="font-size:1cm;"> ELDEKİ ALTIN MİLYEMİ </span>
+<input type="text" id="e2"> <br> <br> 
+<span style="font-size:1cm;">  İSTENİLEN ALTIN MİLYEMİ </span>
+
+<input type="text" id="e3"> <br><br> 
+
+<br>
+<button style="font-size:0.5cm;" onclick="yukselt();" >HESAPLA</button>
 <script>
 
 function yukselt() {
@@ -18,12 +27,45 @@ function yukselt() {
     var e4_val = document.getElementById("e4").value;
     var sonuc = e4_val *((parseFloat(e3_val) - parseFloat(e2_val)) / (1000-e3_val));
     var total = sonuc +parseFloat(e4_val); 
-    alert("eklenmesi gereken saf agirligi: " + sonuc.toFixed(3) + "\n" + "toplam agirlik: " + total.toFixed(3));
+    alert("eklenmesi gereken 24 ayar agirligi (gram) : " + sonuc.toFixed(3) + "\n" + "toplam agirlik (gram):  " + total.toFixed(3));
 
 }
 
+</script>
 
+
+
+
+
+<center><p style="font-size:2cm"> Ayar Düşürme Programı</p></center>
+
+<span style="font-size:1cm;">  ELDEKİ ALTIN AĞIRLIĞI (gram) </span>
+
+<input type="text" id="h4">
+<br><br>
+<span style="font-size:1cm;"> ELDEKİ ALTIN MİLYEMİ </span>
+<input type="text" id="h2"> <br> <br> 
+<span style="font-size:1cm;">  İSTENİLEN ALTIN MİLYEMİ </span>
+
+<input type="text" id="h3"> <br><br> 
+
+<br>
+<button style="font-size:0.5cm;" onclick="dusur();" >HESAPLA</button>
+<script>
+
+function dusur() {
+    var h2_val = document.getElementById("h2").value;
+    var h3_val = document.getElementById("h3").value;
+    var h4_val = document.getElementById("h4").value;
+    
+    var dusur_total =(h4_val * h2_val)/ h3_val; 
+    var dusur_sonuc = parseFloat(dusur_total)- h4_val;
+    alert("eklenmesi gereken katkı agirligi (gram) : " + dusur_sonuc.toFixed(3) + "\n" + "toplam agirlik (gram):  " + dusur_total.toFixed(3));
+
+}
 
 </script>
+
+
 </body>
 </html>
