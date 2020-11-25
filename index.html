@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>ayar yukseltme/indirme programi</title>
-    </haed> 
+        <title>Altın Ayar Yükseltme / Düşürme </title>
+    </head> 
 <body>
 
-<center><p style="font-size:2cm"> Ayar Yükseltme Programı</p></center>
+<center><p style="font-size:2cm">Altın Ayar <span style="color: red;"> Yükseltme</span> </p></center>
 
 <span style="font-size:1cm;">  ELDEKİ ALTIN AĞIRLIĞI (gram) </span>
 
-<input type="text" id="e4">
+<input type="text" id="e4" required placeholder="Değer Giriniz">
 <br><br>
 <span style="font-size:1cm;"> ELDEKİ ALTIN MİLYEMİ </span>
-<input type="text" id="e2"> <br> <br> 
+<input type="text" id="e2" required placeholder="Değer Giriniz" > <br> <br> 
 <span style="font-size:1cm;">  İSTENİLEN ALTIN MİLYEMİ </span>
 
-<input type="text" id="e3"> <br><br> 
+<input type="text" id="e3" required placeholder="Değer Giriniz" > <br><br> 
 
 <br>
 <button style="font-size:0.5cm;" onclick="yukselt();" >HESAPLA</button>
@@ -27,8 +27,8 @@ function yukselt() {
     var e4_val = document.getElementById("e4").value;
     var sonuc = e4_val *((parseFloat(e3_val) - parseFloat(e2_val)) / (1000-e3_val));
     var total = sonuc +parseFloat(e4_val); 
-    alert("eklenmesi gereken 24 ayar agirligi (gram) : " + sonuc.toFixed(3) + "\n" + "toplam agirlik (gram):  " + total.toFixed(3));
-
+    alert(" EKLENMESI GEREKEN SAF ALTIN AĞIRLIĞI (gram): " + sonuc.toFixed(3) + "\n" + "TOPLAM AĞIRLIK (gram):  " + total.toFixed(3));
+    
 }
 
 </script>
@@ -37,17 +37,17 @@ function yukselt() {
 
 
 
-<center><p style="font-size:2cm"> Ayar Düşürme Programı</p></center>
+<center><p style="font-size:2cm">Altın Ayar <span style="color: blue;"> Düşürme</span> </p></center>
 
 <span style="font-size:1cm;">  ELDEKİ ALTIN AĞIRLIĞI (gram) </span>
 
-<input type="text" id="h4">
+<input type="text" id="h4" required placeholder="Değer Giriniz" >
 <br><br>
 <span style="font-size:1cm;"> ELDEKİ ALTIN MİLYEMİ </span>
-<input type="text" id="h2"> <br> <br> 
+<input type="text" id="h2" required placeholder="Değer Giriniz" > <br> <br> 
 <span style="font-size:1cm;">  İSTENİLEN ALTIN MİLYEMİ </span>
 
-<input type="text" id="h3"> <br><br> 
+<input type="text" id="h3" required placeholder="Değer Giriniz" > <br><br> 
 
 <br>
 <button style="font-size:0.5cm;" onclick="dusur();" >HESAPLA</button>
@@ -67,5 +67,11 @@ function dusur() {
 </script>
 
 
+<footer> Not: Bu program hesaplamaları kolaylaştırmak amacıyla yazılmıştır. Hesaplamaların doğruluğundan, ve işleminizin doğruluğundan sorumluluk size aittir. </footer>
 </body>
+
+
+
+
+<footer> hi asel </footer>
 </html>
