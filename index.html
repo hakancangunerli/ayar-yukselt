@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ayar yukseltme/indirme programi</title>
+    </haed> 
+<body>
+Ayar yükseltme<BR>
+<html> eldeki altin milyemi: </html> <input type="text" id="e2"> <br> <br> 
+<html> istenilen altin milyemi </html><input type="text" id="e3"> <br>  <br> 
+<html> eldeki altinin agirligi </html><input type="text" id="e4">
+
+<button onclick="yukselt();" >hesapla</button>
+<script>
+
+function yukselt() {
+    var e2_val = document.getElementById("e2").value;
+    var e3_val = document.getElementById("e3").value;
+    var e4_val = document.getElementById("e4").value;
+    var sonuc = e4_val *((parseFloat(e3_val) - parseFloat(e2_val)) / (1000-e3_val));
+    var total = sonuc +parseFloat(e4_val); 
+    alert("eklenmesi gereken saf agirligi: " + sonuc.toFixed(3) + "\n" + "toplam agirlik: " + total.toFixed(3));
+
+}
+
+
+
+</script>
+</body>
+</html>
