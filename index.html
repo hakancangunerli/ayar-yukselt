@@ -49,7 +49,7 @@ function yukselt() {
     var e4_val = document.getElementById("e4").value;
     var sonuc = e4_val *((parseFloat(e3_val) - parseFloat(e2_val)) / (1000-e3_val));
     var total = sonuc +parseFloat(e4_val); 
-    alert(" EKLENMESI GEREKEN SAF ALTIN AĞIRLIĞI (gram): " + sonuc.toFixed(3) + "\n" + "TOPLAM AĞIRLIK (gram):  " + total.toFixed(3));
+    alert(" EKLENMESI GEREKEN SAF ALTIN AĞIRLIĞI (gram): " + sonuc.toFixed(4) + "\n" + "TOPLAM AĞIRLIK (gram):  " + total.toFixed(4));
     
 }
 
@@ -82,7 +82,7 @@ function dusur() {
     
     var dusur_total =(h4_val * h2_val)/ h3_val; 
     var dusur_sonuc = parseFloat(dusur_total)- h4_val;
-    alert("eklenmesi gereken katkı agirligi (gram) : " + dusur_sonuc.toFixed(3) + "\n" + "toplam agirlik (gram):  " + dusur_total.toFixed(3));
+    alert("eklenmesi gereken katkı agirligi (gram) : " + dusur_sonuc.toFixed(4) + "\n" + "toplam agirlik (gram):  " + dusur_total.toFixed(4));
 
 }
 
