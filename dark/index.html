@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <style>
+
+body{
+    background-color: black;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+}
+
+        </style>
+
+
+        <title>Altın Ayar Yükseltme / Düşürme </title>
+    </head> 
+<body>
+    <span style="font-size: 0.8cm;">AYAR/MİLYEM TABLOSU </span>
+
+    <TABLE BORDER=2>
+        <TR><TH><B>Ayar</B></TH><TH><B>Milyem</B></TH></TR>
+        <TR><TD><I>24</I></TD><TD>1000</TD></TR>
+        <TR><TD><I>22</I></TD><TD>916</TD></TR>
+        <TR><TD><I>18</I></TD><TD>750</TD></TR>
+        <TR><TD><I>10</I></TD><TD>417</TD></TR>
+        </TABLE>
+
+
+
+<center><p style="font-size:2cm">Altın Ayar <span style="color: red;"> Yükseltme</span> </p></center>
+
+<span style="font-size:1cm;">  ELDEKİ ALTIN AĞIRLIĞI (gram) </span>
+
+<input style= "border:2px solid red;" type="text" id="e4" required placeholder="Değer Giriniz">
+<br><br>
+<span style="font-size:1cm;"> ELDEKİ ALTIN MİLYEMİ </span>
+<input style= "border:2px solid red;" type="text" id="e2" required placeholder="Değer Giriniz" > <br> <br> 
+<span style="font-size:1cm;">  İSTENİLEN ALTIN MİLYEMİ </span>
+
+<input style= "border:2px solid red;" type="text" id="e3" required placeholder="Değer Giriniz" > <br><br> 
+
+<br>
+<button style="font-size:0.5cm;" onclick="yukselt();" >HESAPLA</button>
+<script>
+
+function yukselt() {
+    var e2_val = document.getElementById("e2").value;
+    var e3_val = document.getElementById("e3").value;
+    var e4_val = document.getElementById("e4").value;
+    var sonuc = e4_val *((parseFloat(e3_val) - parseFloat(e2_val)) / (1000-e3_val));
+    var total = sonuc +parseFloat(e4_val); 
+    alert(" EKLENMESI GEREKEN SAF ALTIN AĞIRLIĞI (gram): " + sonuc.toFixed(4) + "\n" + "TOPLAM AĞIRLIK (gram):  " + total.toFixed(4));
+    
+}
+
+</script>
+
+
+
+
+
+<center><p style="font-size:2cm">Altın Ayar <span style="color: blue;"> Düşürme</span> </p></center>
+
+<span  style="font-size:1cm;">  ELDEKİ ALTIN AĞIRLIĞI (gram) </span>
+
+<input style= "border:2px solid blue;" type="text" id="h4" required placeholder="Değer Giriniz" >
+<br><br>
+<span style="font-size:1cm;"> ELDEKİ ALTIN MİLYEMİ </span>
+<input style= "border:2px solid blue;" type="text" id="h2" required placeholder="Değer Giriniz" > <br> <br> 
+<span style="font-size:1cm;">  İSTENİLEN ALTIN MİLYEMİ </span>
+
+<input style= "border:2px solid blue;" type="text" id="h3" required placeholder="Değer Giriniz" > <br><br> 
+
+<br>
+<button style="font-size:0.5cm;" onclick="dusur();" >HESAPLA</button>
+<script>
+
+function dusur() {
+    var h2_val = document.getElementById("h2").value;
+    var h3_val = document.getElementById("h3").value;
+    var h4_val = document.getElementById("h4").value;
+    
+    var dusur_total =(h4_val * h2_val)/ h3_val; 
+    var dusur_sonuc = parseFloat(dusur_total)- h4_val;
+    alert("eklenmesi gereken katkı agirligi (gram) : " + dusur_sonuc.toFixed(4) + "\n" + "toplam agirlik (gram):  " + dusur_total.toFixed(4));
+
+}
+
+
+</script>
+
+
+
+
+
+
+
+<footer> Not: Bu program hesaplamaları kolaylaştırmak amacıyla yazılmıştır. Hesaplamaların doğruluğundan, ve işleminizin doğruluğundan sorumluluk size aittir. </footer>
+
+<footer> problem olduğu takdirde, hakancangunerli@gmail.com adresine ulaşınız.</footer>
+
+
+
+
+</body>
+
+
+
+
+
+</html>
